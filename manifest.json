@@ -4,7 +4,10 @@
   "description": "One password to rule them all",
   "version": "0.1",
   "permissions": [
-    "tabs"
+    "activeTab",
+    "clipboardWrite",
+    "cookies",
+    "declarativeContent"
   ],
   "author": "Jason Boyett",
   "content_scripts":[
