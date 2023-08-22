@@ -1,12 +1,10 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Turing Pass",
   "description": "One password to rule them all",
   "version": "0.1",
   "permissions": [
-    "tabs",
-    "http://*/*",
-    "https://*/*"
+    "tabs"
   ],
   "author": "Jason Boyett",
   "content_scripts":[
