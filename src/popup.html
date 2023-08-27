@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Turing Pass</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script async src="popup.js"></script>
+  <h1>Turing Pass</h1>
+  <form name="form" id="form">
+    <div class="form-container white-background">
+      <label for="userPassword">Your Password:</label><br>
+      <input type="password" id="userPassword" name="userPassword" placeholder="password" required><br>
+      <label for="url">Sight Name:</label><br>
+      <input 
+        type="text" 
+        id="url" 
+        name="url" 
+        required>
+      </input><br>
+      <div>
+        <button 
+          type="button" 
+          id="submit" 
+          name="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+  <div 
+    class="container"
+    id="result-container"
+    >
+    <h1
+      id="result"
+      name="result"
+      visibility="hidden">
+    </h1>
+    <button 
+      style="visibility:hidden"
+      class="lower-position copy-button"
+      id="copy">
+      Copy
+    </button>
+  </div>
+</body>
+</html>

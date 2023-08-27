@@ -3,29 +3,36 @@
   "name": "Turing Pass",
   "description": "One password to rule them all",
   "version": "0.1",
+  "icons": {
+    "16": "public/Turing-pass-many.png",
+    "48": "public/Turing-pass-many.png",
+    "128": "public/Turing-pass-many.png"
+  },
   "permissions": [
     "activeTab",
     "clipboardWrite",
     "cookies",
-    "declarativeContent"
+    "declarativeContent",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://turing-pass-api-production.up.railway.app/json",
+    "https://turing-pass-api-production.up.railway.app/"
   ],
   "author": "Jason Boyett",
   "content_scripts":[
     {
-    "matches": [
-        "http://*/*login*",
-        "https://*/*login*",
-        "http://*/*signin*",
-        "https://*/*signin*",
-        "http://*/*auth*",
-        "https://*/*auth*",
-        "http://*/*signup*",
-        "https://*/*signup*",
-        "http://*/*register*",
-        "https://*/*register*",
-        "<all_urls>"
-      ],
-    "js": ["main.js"] 
+    "matches": ["<all_urls>"],
+    "js": ["src/content.js","src/popup.js"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+   "default_popup": "src/popup.html",
+    "default_title": "Turing Pass",
+    "default_icon": "public/Turing-pass-many.png"
+  }
 }
