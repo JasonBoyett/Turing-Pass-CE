@@ -36,6 +36,7 @@ input{
 label{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
+  gap: 10px;
 }
 
 .container{
@@ -52,8 +53,7 @@ label{
   height: 200px;
   margin: 0 auto;
   text-align: center;
-  padding: 40px;
-  margin: 0 auto;
+  align-items: center;
 }
 
 .white-background{
@@ -61,5 +61,20 @@ label{
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.symbols-check-box {
+  display: flex;
+  align-items: center;
+}
+
+.symbols-check-box input[type="checkbox"] {
+  margin-right: 5px;
+  /* Adjust the margin as needed */
+}
+
+.symbols-check-box label {
+  margin: 0;
+  /* Remove default margin */
 }
 

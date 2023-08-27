@@ -6,15 +6,16 @@ const submit = document.getElementById('submit')
 const newPass = document.getElementById('result')
 const copy = document.getElementById('copy')
 const resultContainer = document.getElementById('result-container')
+const symbolsSelector = document.getElementById('symbols')
 
 const callback = (data) => {
   newPass.innerText = data.pass
 }
 
-const getPass = async (userPassword, url) => {
+const getPass = async (userPassword, url, symbols) => {
   try {
     console.log(userPassword, url)
-    const path = `https://turing-pass-api-production.up.railway.app/jsonp?passWord=${userPassword}&siteName=${url}&symbols=true`
+    const path = `https://turing-pass-api-production.up.railway.app/jsonp?passWord=${userPassword}&siteName=${url}&symbols=${symbols}`
     const response = await fetch(path)
     if(response.ok){
       const data = await response.json()
@@ -40,9 +41,11 @@ const copyToClipboard = () => {
 
 urlFelid.value = url
 submit.onclick = (async () => {
+  const symbols = symbolsSelector.checked
+  console.log(symbolsSelector.checked)
   form.remove()
   newPass.style.visibility = 'visible'
-  await getPass(userPassword.value, urlFelid.value)
+  await getPass(userPassword.value, urlFelid.value, symbols)
   copy.style.visibility = 'visible'
   resultContainer.classList.add('white-background')
   copy.onclick = () => copyToClipboard()
