@@ -7,6 +7,7 @@ const newPass = document.getElementById('result')
 const copy = document.getElementById('copy')
 const resultContainer = document.getElementById('result-container')
 const symbolsSelector = document.getElementById('symbols')
+const resultLabel = document.getElementById('result-label')
 
 const callback = (data) => {
   newPass.innerText = data.pass
@@ -48,6 +49,7 @@ submit.onclick = (async () => {
   await getPass(userPassword.value, urlFelid.value, symbols)
   copy.style.visibility = 'visible'
   resultContainer.classList.add('white-background')
+  resultLabel.innerText = 'Your password is:'
   copy.onclick = () => copyToClipboard()
 })
 
