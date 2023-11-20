@@ -1,7 +1,6 @@
 let url = ''
 const tabs = chrome.tabs
 const runtime = chrome.runtime
-console.log('background running')
 
 const extractWebsiteName = (url) => {
   const regex = /^(?:https?:\/\/)?(?:www\.)?([a-zA-Z0-9-]+\.[a-zA-Z]{2,})(?:\/|$)/;

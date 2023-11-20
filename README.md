@@ -9,6 +9,27 @@ Our goal is to allow our users to enjoy the security of using strong unique pass
 
 Turing pass uses a different approach to managing passwords. Instead of us storing your passwords for each sight in our database, we use a secure hashing algorithm to create a unique password for each sight you wish to access. Simply open our easy to use chrome extension and enter your master password along with the name of the sight you wish to access, turing pass will automatically guess the name of the sight but if we get it wrong simply change the name in the "Sight Name" field then with the press of the submit button or a stroke of the "Enter" key our encryption algorithm will generate a strong and unique password for you. Then next time you wish to access that sight simply enter your master password and the sight name you used before and Turing Pass will generate the exact same password for you every time. 
 
+## Architecture
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Client
+    participant API
+
+    User ->> Client: first visit
+    Client ->> API: Master Password & site name
+    API ->> API: Runs encryption algorithm
+    API ->> Client: Encrypted unique password
+    Client ->> User: returns password
+    User ->> Client: Second visit
+    Client ->> API: Master Password & site name
+    API ->> API: Runs encryption algorithm
+    API ->> Client: returns same password as 1st visit
+    Client ->> User: returns same password as 1st visit
+
+```
+
 <div style="display: grid">
     <h3>Open Turing Pass:</h3>
     <img src="public/demo.png" width="500">
