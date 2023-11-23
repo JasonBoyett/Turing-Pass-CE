@@ -3,11 +3,11 @@
 # Turing Pass
 ## What is turing pass?
 Turing pass is a new and more secure way to manage your online passwords.
-Our goal is to allow our users to enjoy the security of using strong unique passwords for every sight while still enjoying the convenience of using a single master password.
+Our goal is to allow our users to enjoy the security of using strong unique passwords for every site while still enjoying the convenience of using a single master password.
 
 ## But how?
 
-Turing pass uses a different approach to managing passwords. Instead of us storing your passwords for each sight in our database, we use a secure hashing algorithm to create a unique password for each sight you wish to access. Simply open our easy to use chrome extension and enter your master password along with the name of the sight you wish to access, turing pass will automatically guess the name of the sight but if we get it wrong simply change the name in the "Sight Name" field then with the press of the submit button or a stroke of the "Enter" key our encryption algorithm will generate a strong and unique password for you. Then next time you wish to access that sight simply enter your master password and the sight name you used before and Turing Pass will generate the exact same password for you every time. 
+Turing pass uses a different approach to managing passwords. Instead of us storing your passwords for each site in our database, we use a secure hashing algorithm to create a unique password for each site you wish to access. Simply open our easy to use chrome extension and enter your master password along with the name of the site you wish to access, turing pass will automatically guess the name of the site but if we get it wrong simply change the name in the "site Name" field then with the press of the submit button or a stroke of the "Enter" key our encryption algorithm will generate a strong and unique password for you. Then next time you wish to access that site simply enter your master password and the site name you used before and Turing Pass will generate the exact same password for you every time. 
 
 ## Architecture
 

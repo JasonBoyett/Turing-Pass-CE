@@ -1,9 +1,9 @@
-let sight = window.location.href
+let site = window.location.href
 
 window.addEventListener('focus', () => {
   console.log('focus changed')
-  sight = window.location.href
-  chrome.runtime.sendMessage("tabFocused", sight, 
+  site = window.location.href
+  chrome.runtime.sendMessage("tabFocused", site, 
     (message) => console.log(message) 
   )
 })
@@ -11,7 +11,7 @@ window.addEventListener('focus', () => {
 chrome.runtime.onMessage.addListener(
   (message, sender, sendResponse) => {
     if(message === 'contentUrl'){
-      sendResponse(sight)
+      sendResponse(site)
     }
   }
 )
