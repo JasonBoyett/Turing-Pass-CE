@@ -1,13 +1,14 @@
 <img src="public/Turing-pass-many.png" alt="Turing Pass" width="300"/>
 
 # Turing Pass
-## What is turing pass?
+
+Turing pass is a new experimental way to manage your online passwords.
 Turing pass is a new and more secure way to manage your online passwords.
 Our goal is to allow our users to enjoy the security of using strong unique passwords for every site while still enjoying the convenience of using a single master password.
 
 ## But how?
 
-Turing pass uses a different approach to managing passwords. Instead of us storing your passwords for each site in our database, we use a secure hashing algorithm to create a unique password for each site you wish to access. Simply open our easy to use chrome extension and enter your master password along with the name of the site you wish to access, turing pass will automatically guess the name of the site but if we get it wrong simply change the name in the "site Name" field then with the press of the submit button or a stroke of the "Enter" key our encryption algorithm will generate a strong and unique password for you. Then next time you wish to access that site simply enter your master password and the site name you used before and Turing Pass will generate the exact same password for you every time. 
+Turing pass uses a different approach to managing passwords. Instead of us storing your passwords for each site in our database, we use a secure hashing algorithm to create a unique password for each site you wish to access. Simply open our easy to use chrome extension and enter your master password along with the name of the site you wish to access, turing pass will automatically guess the name of the site but if we get it wrong simply change the name in the "site Name" field then with the press of the submit button or a stroke of the "Enter" key our encryption algorithm will generate a strong and unique password for you. Then next time you wish to access that site simply enter your master password and the site name you used before and Turing Pass will generate the exact same password for you every time.
 
 ## Architecture
 
@@ -48,6 +49,7 @@ Use this helpful [guide](https://dev.to/ben/how-to-install-chrome-extensions-man
 Of course! Feel free to submit an issue or pull request to contribute to Turing Pass.
 
 ## more information
+
 The back end of Turing Pass uses an API implemented in Go and is available at https://github.com/JasonBoyett/Turing-Pass-API
 
 The code for the chrome extension is written in javascript and is available at https://github.com/JasonBoyett/Turing-Pass-CE

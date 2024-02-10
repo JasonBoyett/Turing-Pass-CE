@@ -9,10 +9,9 @@ window.addEventListener('focus', () => {
 })
 
 chrome.runtime.onMessage.addListener(
-  (message, sender, sendResponse) => {
+  (message, _, sendResponse) => {
     if(message === 'contentUrl'){
       sendResponse(site)
     }
   }
 )
-
